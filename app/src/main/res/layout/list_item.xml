@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result Search Recipe"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nunito_extrabold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_below="@+id/textResult"
+            android:layout_marginTop="8dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                >
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="190dp"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/smoothies" />
+
+                <TextView
+                    android:id="@+id/nama resep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rasberry Smoothies"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/nunito_bold"
+                    />
+
+                <TextView
+                    android:id="@+id/kalori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="300 kcal"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginBottom="30sp"
+                    android:fontFamily="@font/nunito_bold"
+                    />
+
+                <Button
+                    android:id="@+id/bookmark"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/icon_bookmark"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="140dp"
+                    android:contentDescription="go to bookmark page"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:cardPreventCornerOverlap="false"
+                >
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="220dp"
+                    android:src="@drawable/salad"
+                    android:scaleType="centerCrop"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetable Salad"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/nunito_bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 kcal"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginBottom="30sp"
+                    android:fontFamily="@font/nunito_bold"
+                    />
+
+                <Button
+                    android:id="@+id/buttonLike2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/icon_bookmark"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="140dp"
+                    android:contentDescription="go to favorite page"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
