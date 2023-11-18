@@ -4,22 +4,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".homePage">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
         <TextView
-            android:id="@+id/textResult"
+            android:id="@+id/background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result Search Recipe"
+            android:background="@drawable/background_home"
+            android:padding="55dp" />
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/oleo_script_bold"
+            android:text="CookRecipe"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/placeholder"
+            android:drawableRight="@drawable/icon_search"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="8dp"
+            android:hint="Search recipe here!"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popular Recipe"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:fontFamily="@font/nunito_extrabold"
-            android:layout_marginTop="20dp"
+            android:layout_below="@id/placeholder"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="20dp"
             />
 
@@ -28,8 +62,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp"
-            android:layout_below="@+id/textResult"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="185dp"
             >
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
@@ -42,14 +75,13 @@
                 >
 
                 <ImageView
-                    android:id="@+id/image"
                     android:layout_width="190dp"
                     android:layout_height="220dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/smoothies" />
+                    android:src="@drawable/smoothies"
+                    />
 
                 <TextView
-                    android:id="@+id/nama_resep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rasberry Smoothies"
@@ -62,7 +94,6 @@
                     />
 
                 <TextView
-                    android:id="@+id/kalori"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="300 kcal"
