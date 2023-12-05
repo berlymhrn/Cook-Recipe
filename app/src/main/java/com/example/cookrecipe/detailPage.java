@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 public class detailPage extends AppCompatActivity {
 
     TextView nameRecipe, ingredients, carbs, proteins, fats, sugars ;
@@ -44,7 +46,12 @@ public class detailPage extends AppCompatActivity {
             fats.setText(String.valueOf(fatsValue));
             sugars.setText(String.valueOf(sugarsValue));
         }
+        if (intent != null && intent.hasExtra("ITEM_DATA")) {
+            ItemData itemData = intent.getParcelableExtra("ITEM_DATA");
 
+            nameRecipe.setText(itemData.itemLabel);
+            Glide.with(this).load(itemData.itemImage).into(image);
+        }
     }
 
     public void arrowBack(View view) {
