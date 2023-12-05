@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".searchPage">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/placeholder"
+        android:fontFamily="@font/nunito_bold"
+        android:hint="Search recipe here!"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/icon_search"
+        android:contentDescription="go to serach page"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="18dp"
+        android:onClick="onItemClick"
+        android:elevation="0dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/button2"
+        android:elevation="2dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        app:itemIconSize="38dp"
+        app:itemIconTint="@color/black"
+        app:itemRippleColor="#00000000"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

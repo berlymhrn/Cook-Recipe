@@ -11,46 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_home"
-        android:padding="55dp" />
+        android:padding="35dp" />
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/oleo_script_bold"
         android:text="CookRecipe"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="25sp" />
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logo"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/placeholder"
-        android:drawableRight="@drawable/icon_search"
-        android:fontFamily="@font/nunito_bold"
-        android:hint="Search recipe here!"
-        android:padding="8dp"
-        android:textSize="15sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/popular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/search"
+        android:layout_below="@id/background"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="Popular Recipe"
         android:textColor="@color/black"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        android:layout_marginBottom="20dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -65,7 +50,6 @@
                 android:id="@+id/cardGrup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/popular"
                 android:layout_marginTop="15dp">
 
                 <androidx.cardview.widget.CardView
@@ -76,12 +60,14 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="15dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="vegetarianSalad">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -106,17 +92,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="100 kcal"
+                            android:text="137 kcal"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark_fill"
-                            android:contentDescription="go to bookmark page" />
 
                     </LinearLayout>
 
@@ -126,12 +104,14 @@
                     android:layout_width="180dp"
                     android:layout_height="260dp"
                     android:layout_marginStart="16dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="smoothies">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        >
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -156,19 +136,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="10dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="350 kcal"
+                            android:text="362 kcal"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
-
-                        <Button
-                            android:id="@+id/bookmark"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page"
-                            android:onClick="bookmark" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -188,7 +158,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="15dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="mac">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -222,15 +193,6 @@
                             android:textColor="@color/black"
                             android:textSize="14sp" />
 
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
-
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -239,7 +201,8 @@
                     android:layout_width="180dp"
                     android:layout_height="260dp"
                     android:layout_marginStart="16dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="rawon">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -269,17 +232,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="200 kcal"
                             android:textColor="@color/black"
                             android:textSize="14sp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
 
                     </LinearLayout>
 
@@ -296,11 +251,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="180dp"
                     android:layout_height="260dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="15dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="chicken">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -311,7 +265,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mac_cheese" />
+                            android:src="@drawable/chicken" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -320,7 +274,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Mac And Cheese"
+                            android:text="Crispy Chili Chicken"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -328,20 +282,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="35dp"
+                            android:layout_marginTop="15dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="400 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
-
 
                     </LinearLayout>
 
@@ -351,7 +296,8 @@
                     android:layout_width="180dp"
                     android:layout_height="260dp"
                     android:layout_marginStart="16dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="aglio">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -362,7 +308,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/rawon" />
+                            android:src="@drawable/aglio" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -371,7 +317,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Rawon"
+                            android:text="Spaghetti Aglio Olio"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -379,19 +325,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="15dp"
-                            android:layout_marginTop="35dp"
+                            android:layout_marginTop="15dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="390 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
 
                     </LinearLayout>
 
@@ -412,7 +350,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="15dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="pasta">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -423,7 +362,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mac_cheese" />
+                            android:src="@drawable/pasta" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -432,7 +371,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Mac And Cheese"
+                            android:text="Creamy Pasta"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -442,19 +381,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="150 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
-
-
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -463,7 +392,8 @@
                     android:layout_width="180dp"
                     android:layout_height="260dp"
                     android:layout_marginStart="16dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="veganPizza">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -474,7 +404,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/rawon" />
+                            android:src="@drawable/vegan_pizza" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -483,7 +413,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Rawon"
+                            android:text="Vegan Pizza"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -493,17 +423,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="272 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
 
                     </LinearLayout>
 
@@ -525,7 +447,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="15dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="cabbageWrap">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -536,7 +459,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/mac_cheese" />
+                            android:src="@drawable/cabbage_wrap" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -545,7 +468,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Mac And Cheese"
+                            android:text="Cabbage Wrap"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -555,18 +478,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="114 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
-
 
                     </LinearLayout>
 
@@ -576,7 +490,8 @@
                     android:layout_width="180dp"
                     android:layout_height="260dp"
                     android:layout_marginStart="16dp"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:onClick="kimbab">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -587,7 +502,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="150dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/rawon" />
+                            android:src="@drawable/kimbab" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -596,7 +511,7 @@
                             android:layout_marginTop="8dp"
                             android:layout_marginEnd="15dp"
                             android:fontFamily="@font/nunito_bold"
-                            android:text="Rawon"
+                            android:text="Kimbab"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
@@ -606,17 +521,9 @@
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="35dp"
                             android:fontFamily="@font/nunito_semibold"
-                            android:text="700 kcal"
+                            android:text="439 kcal"
                             android:textColor="@color/black"
                             android:textSize="14dp" />
-
-                        <Button
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_marginStart="140dp"
-                            android:layout_marginTop="-23dp"
-                            android:background="@drawable/icon_bookmark"
-                            android:contentDescription="go to bookmark page" />
 
                     </LinearLayout>
 
@@ -630,18 +537,22 @@
     </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/id_bottom_navigation"
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="1dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/button2"
-        android:padding="5dp"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
+        android:elevation="2dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        app:itemIconSize="38dp"
         app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
+        app:itemRippleColor="#00000000"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation_menu" />
 
 
