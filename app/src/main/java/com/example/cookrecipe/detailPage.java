@@ -9,10 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.cookrecipe.ItemData;
+import com.example.cookrecipe.R;
+import com.example.cookrecipe.homePage;
 
 public class detailPage extends AppCompatActivity {
 
-    TextView nameRecipe, ingredients, carbs, proteins, fats, sugars ;
+    TextView nameRecipe, ingredients, carbs, proteins, fats, sugars;
     ImageView image;
 
     @Override
@@ -27,9 +30,10 @@ public class detailPage extends AppCompatActivity {
         proteins = findViewById(R.id.proteins);
         fats = findViewById(R.id.fats);
         sugars = findViewById(R.id.sugars);
+        ingredients = findViewById(R.id.ingredients);
 
         Intent intent = getIntent();
-        if(intent != null){
+        if (intent != null) {
             int imageResource = intent.getIntExtra("image", 0);
             String recipeName = intent.getStringExtra("nameRecipe");
             String recipeIngredients = intent.getStringExtra("ingredients");
@@ -46,12 +50,41 @@ public class detailPage extends AppCompatActivity {
             fats.setText(String.valueOf(fatsValue));
             sugars.setText(String.valueOf(sugarsValue));
         }
+
         if (intent != null && intent.hasExtra("ITEM_DATA")) {
             ItemData itemData = intent.getParcelableExtra("ITEM_DATA");
 
             nameRecipe.setText(itemData.itemLabel);
             Glide.with(this).load(itemData.itemImage).into(image);
+            String itemIngredients = intent.getStringExtra("ITEM_INGREDIENTS");
+            if (itemIngredients != null) {
+                ingredients.setText(itemIngredients);
+            }
+
+            int fat = 0;
+            if (intent.hasExtra("ITEM_FAT")) {
+                fat = Integer.parseInt(intent.getStringExtra("ITEM_FAT"));
+            }
+            fats.setText(String.valueOf(fat));
+
+            int sugar = 0;
+            if (intent.hasExtra("ITEM_SUGARS")) {
+                sugar = Integer.parseInt(intent.getStringExtra("ITEM_SUGARS"));
+            }
+            sugars.setText(String.valueOf(sugar));
+
+            int protein = 0;
+            if (intent.hasExtra("ITEM_PROTEINS")) {
+                protein = Integer.parseInt(intent.getStringExtra("ITEM_PROTEINS"));
+            }
+            proteins.setText(String.valueOf(protein));
         }
+
+        int carb = 0;
+        if (intent.hasExtra("ITEM_CARBS")) {
+            carb = Integer.parseInt(intent.getStringExtra("ITEM_CARBS"));
+        }
+        carbs.setText(String.valueOf(carb));
     }
 
     public void arrowBack(View view) {

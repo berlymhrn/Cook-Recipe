@@ -66,7 +66,7 @@ public class homePage extends AppCompatActivity {
 
     public void vegetarianSalad(View view) {
         nameRecipe = "Vegetarian Salad";
-        ingredients = "1. Lettuce\n" + "2. Tomatoes\n" + "3. Cucumbers\n" + "4. Bell peppers\n" + "5. Carrots\n" + "6. Red onions\n" + "7. Olives";
+        ingredients = "1 large ripe Ataulfo mango, peeled and roughly chopped (about 1 cup)\n1 cup plain unsweetened kefir\n1 cup frozen blackberries (4 1/2 ounces)";
         carbs = 200;
         proteins = 300;
         fats = 2;
@@ -76,100 +76,101 @@ public class homePage extends AppCompatActivity {
     }
 
 
+
     public void smoothies(View view) {
-        String nameRecipe = "Raspberry Smoothies";
-        String ingredients = "1. Raspberries\n" + "2. Yogurt\n" + "3. Milk\n" + "4. Honey (optional)\n" + "5. Ice cubes";
-        carbs = 38;
-        proteins = 15;
-        fats = 7;
-        sugars = 29;
+        nameRecipe = "Raspberry Smoothies";
+        ingredients = "Frozen raspberries: 1 cup\nBanana: 1\nGreek yogurt: 1/2 cup\nHoney: 1 tablespoon\nAlmond milk: 1 cup\nIce cubes: 1 cup";
+        carbs = 30;
+        proteins = 5;
+        fats = 3;
+        sugars = 20;
 
         goToDetail(nameRecipe, ingredients, R.drawable.smoothies, carbs, proteins, fats, sugars);
     }
 
     public void mac(View view) {
-        String nameRecipe = "Mac And Cheese";
-        String ingredients = "1. Elbow macaroni\n" + "2. Butter\n" + "3. All-purpose flour\n" + "4. Milk\n" + "5. Cheddar cheese\n" + "6. Salt\n" + "7. Black pepper\n" + "8. Optional toppings (breadcrumbs, parsley, etc.)";
-        carbs = 157;
-        proteins = 50;
-        fats = 117;
-        sugars = 6;
+        nameRecipe = "Mac and Cheese";
+        ingredients = "8 ounces elbow macaroni\n2 cups shredded sharp Cheddar cheese\n1/2 cup grated Parmesan cheese\n3 cups milk\n1/4 cup butter\n2 1/2 tablespoons all-purpose flour\n2 tablespoons butter\n1/2 cup bread crumbs\n1 pinch paprika";
+        carbs = 200;
+        proteins = 100;
+        fats = 150;
+        sugars = 30;
 
         goToDetail(nameRecipe, ingredients, R.drawable.mac_cheese, carbs, proteins, fats, sugars);
     }
 
     public void rawon(View view) {
-        String nameRecipe = "Rawon";
-        String ingredients = "1. Beef (preferably shank or chuck)\n" + "2. Kluwek (black nuts)\n" + "3. Lemongrass\n" + "4. Galangal\n" + "5. Bay leaves\n" + "6. Kaffir lime leaves\n" + "7. Tamarind\n" + "8. Shallots\n" + "9. Garlic\n" + "10. Candlenuts\n" + "11. Salt\n" + "12. Palm sugar\n" + "13. Cooking oil\n" + "14. Water\n" + "15. Bean sprouts (optional)\n" + "16. Sambal (chili paste) for serving";
-        carbs = 20;
-        proteins = 50;
-        fats = 3;
-        sugars = 5;
+        nameRecipe = "Rawon";
+        ingredients = "500g beef (cut into bite-sized pieces)\n1 liter water\n3 kaffir lime leaves\n2 lemongrass (crushed)\n2 bay leaves\n3 salam leaves\n5 candlenuts\n3 cloves garlic\n6 shallots\n1 inch galangal\n1 inch ginger\n2 tablespoons oil\n1 teaspoon salt\n1 teaspoon sugar\n2 tablespoons tamarind juice\n2 tablespoons Indonesian sweet soy sauce\nHard-boiled eggs\ncucumber\nfried shallots (for garnish)";
+        carbs = 200;
+        proteins = 250;
+        fats = 100;
+        sugars = 20;
 
         goToDetail(nameRecipe, ingredients, R.drawable.rawon, carbs, proteins, fats, sugars);
     }
 
     public void chicken(View view) {
         String nameRecipe = "Crispy Chili Chicken";
-        String ingredients = "1. Chicken pieces\n2. All-purpose flour\n3. Cornstarch\n4. Baking powder\n5. Salt\n6. Pepper\n7. Eggs\n8. Chili sauce\n9. Soy sauce\n10. Garlic\n11. Sugar\n12. Vinegar\n13. Green onions\n14. Sesame seeds\n15. Oil for frying";
-        carbs = 40;
-        proteins = 30;
-        fats = 20;
-        sugars = 5;
+        ingredients = "Boneless chicken thighs: 4 pieces\nCornstarch: 1/2 cup\nEgg: 1\nSalt: 1/2 teaspoon\nBlack pepper: 1/4 teaspoon\nChili flakes: 1 tablespoon\nSoy sauce: 2 tablespoons\nHoney: 2 tablespoons\nSesame oil: 1 teaspoon\nCanola oil: for frying";
+        carbs = 12;
+        proteins = 25;
+        fats = 15;
+        sugars = 6;
 
         goToDetail(nameRecipe, ingredients, R.drawable.chicken, carbs, proteins, fats, sugars);
     }
 
     public void aglio(View view) {
         String nameRecipe = "Spaghetti Aglio Olio";
-        String ingredients = "1. Spaghetti\n2. Olive oil\n3. Garlic\n4. Red pepper flakes\n5. Parsley\n6. Salt\n7. Parmesan cheese";
-        carbs = 40;
-        proteins = 10;
+        ingredients = "Spaghetti: 8 ounces\nGarlic (thinly sliced): 4 cloves\nRed pepper flakes: 1/2 teaspoon\nExtra-virgin olive oil: 1/3 cup\nFresh parsley (chopped): 1/4 cup\nSalt: to taste\nBlack pepper: to taste\nGrated Parmesan cheese: for garnish (optional)";
+        carbs = 50;
+        proteins = 8;
         fats = 15;
-        sugars = 2;
+        sugars = 3;
 
         goToDetail(nameRecipe, ingredients, R.drawable.aglio, carbs, proteins, fats, sugars);
     }
 
     public void pasta(View view) {
-        String nameRecipe = "Creamy Pasta";
-        String ingredients = "1. Pasta\n2. Heavy cream\n3. Butter\n4. Parmesan cheese\n5. Garlic\n6. Salt\n7. Black pepper\n8. Italian seasoning";
-        carbs = 50;
-        proteins = 15;
+        nameRecipe = "Creamy Pasta";
+        ingredients = "Pasta: 8 ounces\nHeavy cream: 1 cup\nButter: 2 tablespoons\nGarlic (minced): 2 cloves\nParmesan cheese (grated): 1/2 cup\nSalt: to taste\nPepper: to taste\nFresh parsley (chopped): 2 tablespoons";
+        carbs = 60;
+        proteins = 12;
         fats = 25;
-        sugars = 5;
+        sugars = 3;
 
         goToDetail(nameRecipe, ingredients, R.drawable.pasta, carbs, proteins, fats, sugars);
     }
 
     public void veganPizza(View view) {
         String nameRecipe = "Vegan Pizza";
-        String ingredients = "1. Pizza dough\n2. Tomato sauce\n3. Vegan cheese\n4. Bell peppers\n5. Red onions\n6. Mushrooms\n7. Olives\n8. Spinach";
-        carbs = 30;
-        proteins = 10;
+        ingredients = "Pizza dough: 1 ball\nMarinara sauce: 1 cup\nVegan cheese: 1 1/2 cups\nBell peppers (sliced): 1 cup\nRed onions (sliced): 1/2 cup\nMushrooms (sliced): 1 cup\nSpinach: 1 cup\nCherry tomatoes (halved): 1/2 cup\nOlive oil: 2 tablespoons\nSalt: to taste\nPepper: to taste\nItalian seasoning: 1 teaspoon";
+        carbs = 40;
+        proteins = 8;
         fats = 15;
-        sugars = 2;
+        sugars = 5;
 
         goToDetail(nameRecipe, ingredients, R.drawable.vegan_pizza, carbs, proteins, fats, sugars);
     }
 
     public void cabbageWrap(View view) {
         String nameRecipe = "Cabbage Wrap";
-        String ingredients = "1. Cabbage leaves\n2. Quinoa\n3. Bell peppers\n4. Carrots\n5. Red onions\n6. Tomatoes\n7. Hummus\n8. Avocado";
-        carbs = 15;
-        proteins = 5;
-        fats = 3;
-        sugars = 5;
+        ingredients = "4-6 large cabbage leaves\n1 cup cooked quinoa\n1 cup black beans (cooked)\n1/2 cup corn\n1/2 red bell pepper (diced)\n2 green onions (chopped)\n1 avocado (sliced)\nJuice of 1 lime\n2 tablespoons chopped cilantro\nSalt to taste\nPepper to taste\n1 teaspoon cumin\n1 teaspoon chili powder\n1/2 teaspoon garlic powder";
+        carbs = 30;
+        proteins = 12;
+        fats = 8;
+        sugars = 4;
 
         goToDetail(nameRecipe, ingredients, R.drawable.cabbage_wrap, carbs, proteins, fats, sugars);
     }
 
     public void kimbab(View view) {
         String nameRecipe = "Kimbab";
-        String ingredients = "1. Sushi rice\n2. Seaweed sheets\n3. Carrots\n4. Cucumber\n5. Pickled radish\n6. Crab sticks\n7. Eggs\n8. Spinach";
-        carbs = 30;
-        proteins = 5;
-        fats = 7;
+        ingredients = "4 cups cooked sushi rice\n5 sheets seaweed (nori)\n1 medium carrot (julienned)\n1 cucumber (julienned)\n1 cup spinach (blanched and squeezed)\n5 imitation crab sticks\n5 strips yellow pickled radish\n5 eggs (made into thin omelettes)\nSesame oil\nSalt\nSesame seeds";
+        carbs = 45;
+        proteins = 10;
+        fats = 5;
         sugars = 2;
 
         goToDetail(nameRecipe, ingredients, R.drawable.kimbab, carbs, proteins, fats, sugars);

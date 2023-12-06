@@ -90,32 +90,90 @@ public class FetchRecipe extends AsyncTask<String, Void, ArrayList<ItemData>> {
 
         if (recipeJSONString != null) {
             try {
-                JSONObject jsonObject = new JSONObject(recipeJSONString);
-                JSONArray hitsArray = jsonObject.getJSONArray("hits");
+                JSONArray hitsArray = new JSONObject(recipeJSONString).getJSONArray("hits");
                 for (int i = 0; i < hitsArray.length(); i++) {
                     JSONObject hit = hitsArray.getJSONObject(i);
                     JSONObject recipe = hit.getJSONObject("recipe");
                     String label = recipe.getString("label");
                     String image = recipe.optString("image", "");
                     String caloriesStr = recipe.optString("calories", "");
-
                     int caloriesInt = 0;
                     if (!caloriesStr.isEmpty()) {
                         float caloriesFloat = Float.parseFloat(caloriesStr);
                         caloriesInt = (int) caloriesFloat;
                     }
 
-                    ItemData itemData = new ItemData(image, label, String.valueOf(caloriesInt));
+                    JSONArray ingredientLinesArray = recipe.optJSONArray("ingredientLines");
+                    String ingredientLines = "";
+                    if (ingredientLinesArray != null) {
+                        StringBuilder ingredientLinesBuilder = new StringBuilder();
+                        for (int j = 0; j < ingredientLinesArray.length(); j++) {
+                            String ingredientLine = ingredientLinesArray.optString(j, "");
+                            ingredientLinesBuilder.append(ingredientLine);
+                            if (j < ingredientLinesArray.length() - 1) {
+                                ingredientLinesBuilder.append("\n");
+                            }
+                        }
+                        ingredientLines = ingredientLinesBuilder.toString();
+                    }
+
+                    JSONObject totalNutrients = recipe.getJSONObject("totalNutrients");
+                    JSONObject fatsObject = totalNutrients.optJSONObject("FAT");
+                    JSONObject sugarsObject = totalNutrients.optJSONObject("SUGAR");
+                    JSONObject proteinsObject = totalNutrients.optJSONObject("PROCNT");
+                    JSONObject carbsObject = totalNutrients.optJSONObject("CHOCDF");
+
+                    int fatsInt = 0;
+                    if (fatsObject != null) {
+                        String fatStr = fatsObject.optString("quantity", "");
+                        if (!fatStr.isEmpty()) {
+                            float fatFloat = Float.parseFloat(fatStr);
+                            fatsInt = (int) fatFloat;
+                        }
+                    }
+
+                    int sugarsInt = 0;
+                    if (sugarsObject != null) {
+                        String sugarsStr = sugarsObject.optString("quantity", "");
+                        if (!sugarsStr.isEmpty()) {
+                            float sugarsFloat = Float.parseFloat(sugarsStr);
+                            sugarsInt = (int) sugarsFloat;
+                        }
+                    }
+
+                    int proteinsInt = 0;
+                    if (proteinsObject != null) {
+                        String proteinsStr = proteinsObject.optString("quantity", "");
+                        if (!proteinsStr.isEmpty()) {
+                            float proteinsFloat = Float.parseFloat(proteinsStr);
+                            proteinsInt = (int) proteinsFloat;
+                        }
+                    }
+
+                    int carbsInt = 0;
+                    if (carbsObject != null) {
+                        String carbsStr = carbsObject.optString("quantity", "");
+                        if (!carbsStr.isEmpty()) {
+                            float carbsFloat = Float.parseFloat(carbsStr);
+                            carbsInt = (int) carbsFloat;
+                        }
+                    }
+
+                    ItemData itemData = new ItemData(image, label, String.valueOf(caloriesInt), ingredientLines, String.valueOf(fatsInt), String.valueOf(sugarsInt),String.valueOf(proteinsInt),String.valueOf(carbsInt));
                     itemData.itemImage = image;
                     itemData.itemLabel = label;
                     itemData.itemCalories = String.valueOf(caloriesInt);
+                    itemData.itemIngredients = ingredientLines;
+                    itemData.itemFats = String.valueOf(fatsInt);
+                    itemData.itemSugars = String.valueOf(sugarsInt);
+                    itemData.itemCarbs = String.valueOf(carbsInt);
                     fetchedData.add(itemData);
                 }
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
+
         return fetchedData;
     }
 
