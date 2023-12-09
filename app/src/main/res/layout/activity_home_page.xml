@@ -11,15 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_home"
-        android:padding="35dp" />
+        android:padding="30dp" />
 
     <TextView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/oleo_script_bold"
-        android:text="CookRecipe"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/lobster_two_bold_italic"
+        android:text="Nutricipe"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp" />
@@ -30,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/background"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="Popular Recipe"
         android:textColor="@color/black"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:layout_marginBottom="20dp"/>
 
     <ScrollView
@@ -50,7 +50,7 @@
                 android:id="@+id/cardGrup1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                >
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card1"

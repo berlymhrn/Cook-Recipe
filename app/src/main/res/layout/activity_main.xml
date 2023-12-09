@@ -11,18 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:fontFamily="@font/oleo_script_bold"
-        android:text="CookRecipe"
+        android:fontFamily="@font/lobster_two_bold_italic"
+        android:text="Nutricipe"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="35sp" />
 
     <ImageView
         android:id="@+id/imageStartPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/icon_start_page" />
 
     <TextView

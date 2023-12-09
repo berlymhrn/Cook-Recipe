@@ -1,6 +1,7 @@
 package com.example.cookrecipe;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
@@ -93,9 +96,29 @@ public class searchPage extends AppCompatActivity {
             Toast.makeText(this,"Loading, Please Wait a Moment", Toast.LENGTH_LONG).show();
             new FetchRecipe(this, values, itemAdapter, recyclerView).execute(queryString);
         } else {
-            Toast.makeText(this, "Please Check Your Connection.",
-                    Toast.LENGTH_LONG).show();
+            showCustomAlertDialog();
         }
     }
+
+    private void showCustomAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        View view = getLayoutInflater().inflate(R.layout.activity_alert_connection, null);
+        Button dialogButton = view.findViewById(R.id.dialog_button);
+
+        builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+
+        alertDialog.setCanceledOnTouchOutside(false);
+
+        dialogButton.setOnClickListener(v -> {
+            alertDialog.dismiss();
+            searchRecipe();
+        });
+
+        alertDialog.show();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+    }
+
+
 
     }

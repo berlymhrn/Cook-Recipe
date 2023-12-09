@@ -1,0 +1,47 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/button">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connection Error !"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:fontFamily="@font/nunito_black"/>
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please check your connection and try again"
+        android:layout_below="@+id/dialog_title"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/dialog_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="OK"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunito_extrabold"
+        android:layout_below="@+id/dialog_message"
+        android:layout_marginTop="30dp"
+        android:textAllCaps="false"
+        android:background="@drawable/button2"
+        android:backgroundTint="@color/red"
+        />
+</RelativeLayout>

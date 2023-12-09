@@ -75,8 +75,6 @@ public class homePage extends AppCompatActivity {
         goToDetail(nameRecipe, ingredients, R.drawable.salad, carbs, proteins, fats, sugars);
     }
 
-
-
     public void smoothies(View view) {
         nameRecipe = "Raspberry Smoothies";
         ingredients = "Frozen raspberries: 1 cup\nBanana: 1\nGreek yogurt: 1/2 cup\nHoney: 1 tablespoon\nAlmond milk: 1 cup\nIce cubes: 1 cup";
@@ -174,6 +172,17 @@ public class homePage extends AppCompatActivity {
         sugars = 2;
 
         goToDetail(nameRecipe, ingredients, R.drawable.kimbab, carbs, proteins, fats, sugars);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        showCustomAlert();
+    }
+
+    private void showCustomAlert() {
+        alertExit alertDialog = new alertExit();
+        alertDialog.show(getSupportFragmentManager(), "CustomAlertDialog");
     }
 
 }

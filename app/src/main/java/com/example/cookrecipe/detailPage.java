@@ -78,13 +78,14 @@ public class detailPage extends AppCompatActivity {
                 protein = Integer.parseInt(intent.getStringExtra("ITEM_PROTEINS"));
             }
             proteins.setText(String.valueOf(protein));
+
+            int carb = 0;
+            if (intent.hasExtra("ITEM_CARBS")) {
+                carb = Integer.parseInt(intent.getStringExtra("ITEM_CARBS"));
+            }
+            carbs.setText(String.valueOf(carb));
         }
 
-        int carb = 0;
-        if (intent.hasExtra("ITEM_CARBS")) {
-            carb = Integer.parseInt(intent.getStringExtra("ITEM_CARBS"));
-        }
-        carbs.setText(String.valueOf(carb));
     }
 
     public void arrowBack(View view) {

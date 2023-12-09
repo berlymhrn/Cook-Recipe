@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/exitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="EXIT"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/confirmExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exitText"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Are You Sure Want to Exit?"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/confirmYes"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmExit"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button2"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="YES"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/confirmNo"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmExit"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button2"
+            android:backgroundTint="@color/red"
+            android:fontFamily="@font/nunito_extrabold"
+            android:text="NO"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    >
+
+</RelativeLayout>
